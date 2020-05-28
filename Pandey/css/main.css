@@ -20,18 +20,51 @@ html {
         margin-top: -5%;
     }
 }
- 
+
+.input{
+    margin-top: 10%;   
+}
+
+input{
+    width: 100%;
+    display: inline-block;
+    font-family: "montserrat-medium", sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    height: 5.4rem;
+    line-height: calc(5.4rem - .4rem);
+    padding: 0 3rem;
+    margin: 0 .3rem 1.2rem 0;
+    color: #39b54a;
+    text-decoration: none;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:transparent;
+    border: 1px solid white;
+}
 .log{
     margin-left: 50;
 }
-.col-md-6{
-    padding: 0;
+ 
+#regbtn{
+    color: white;
+    background-color: #39b54a;
+    border: none;
+    width: 100%;
 }
-#mreg{
+
+#mreg1{
+    margin: 0;
     color: #39b54a;
     display: inline;
     margin: 10;
+    text-transform: uppercase;
 }
+
 #closebtn{
     background-color: #39b54a;
     color: white;
