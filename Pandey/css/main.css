@@ -1,26 +1,6 @@
 html {
     font-size: 10px;
 }
-
-@media only screen and (max-width: 600px) {
-    #mreg{
-        color: #39b54a;
-        display: inline;
-        margin: 10;
-        font-size: 16px;
-    }
-    #closebtn{
-        margin-right: -29pxi;
-        background-color: #39b54a;
-        color: white;
-        border: none;
-        padding: 0 2rem;
-    }
-    .close{
-        margin-top: -5%;
-    }
-}
-
 .input{
     margin-top: 10%;   
 }
@@ -43,25 +23,40 @@ input{
     cursor: pointer;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color:transparent;
-    border: 1px solid white;
+    background-color:white;
+    border: none;
+}
+input:focus{
+    color: #39b54a;
 }
 .log{
     margin-left: 50;
 }
- 
+#or{
+    color: white;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 12px;
+}
 #regbtn{
     color: white;
     background-color: #39b54a;
     border: none;
     width: 100%;
 }
-
+#logbtn{
+    color: #39b54a;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    border: solid 1px #39b54a;
+}
 #mreg1{
     margin: 0;
+    font-size: 30px;
     color: #39b54a;
     display: inline;
-    margin: 10;
     text-transform: uppercase;
 }
 
@@ -91,7 +86,7 @@ input{
     margin: auto;
     padding: 20px;
     border: none;
-    width: 87%;
+    width: 47%;
   }
   
   /* The Close Button */
@@ -103,12 +98,36 @@ input{
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  @media only screen and (max-width: 600px) {
+    #mreg1{
+        color: #39b54a;
+        display: inline;
+        margin: 10;
+        font-size: 20px;
+    }
+    #closebtn{
+        margin-right: -29pxi;
+        background-color: #39b54a;
+        color: white;
+        border: none;
+        padding: 0 2rem;
+    }
+    .close{
+        margin-top: -5%;
+    }
+    .modal-content{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    #mreg1{
+        color: #39b54a;
+        display: inline;
+        margin: 10;
+        font-size: 16px;
+    }
+}
+
 .user{
     color: #39b54a;
     font-size: 18px;
@@ -3119,7 +3138,7 @@ html.no-csstransitions .home-content__main {
 .contact-content input[type="password"],
 .contact-content textarea,
 .contact-content select {
-    color: rgba(255, 255, 255, 0.6);
+    color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     margin-bottom: .9rem;
 }
@@ -3144,31 +3163,31 @@ html.no-csstransitions .home-content__main {
 .contact-content input::-webkit-input-placeholder,
 .contact-content select::-webkit-input-placeholder,
 .contact-content textarea::-webkit-input-placeholder {
-    color: #4f4f4f;
+    color: #fff;
 }
 
 .contact-content input:-moz-placeholder,
 .contact-content select:-moz-placeholder,
 .contact-content textarea:-moz-placeholder {
-    color: #4f4f4f;    /* Firefox 18- */
+    color: #fff;    /* Firefox 18- */
 }
 
 .contact-content input::-moz-placeholder,
 .contact-content select::-moz-placeholder,
 .contact-content textarea::-moz-placeholder {
-    color: #4f4f4f;    /* Firefox 19+ */
+    color: #fff;    /* Firefox 19+ */
 }
 
 .contact-content input:-ms-input-placeholder,
 .contact-content select:-ms-input-placeholder,
 .contact-content textarea:-ms-input-placeholder {
-    color: #4f4f4f;
+    color: #fff;
 }
 
 .contact-content input.placeholder,
 .contact-content select.placeholder,
 .contact-content textarea.placeholder {
-    color: #4f4f4f !important;
+    color: #fff !important;
 }
 .contact-primary, .contact-secondary {
     float: left;
