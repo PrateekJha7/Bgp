@@ -83,10 +83,10 @@ influential brands and <br>
 digital experiences.
 </h1>
 <div class="home-content__buttons">
-<a class="btn btn--stroke" id="myBtn">
+<a class="btn btn--stroke">
 Book a Service
 </a>
-<a  class="btn btn--stroke">
+<a  class="btn btn--stroke"  onclick="disp(0)">
 Register Now
 </a>
 </div>
@@ -274,8 +274,7 @@ Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvin
 <div id="myModal" class="modal">
     <div class="modal-content"> 
       <div class="row" style="padding:30px 7px 0px 7px ;"> 
-       <h3 id="mreg1" style="display: block;">Register Now  <span class="close"><button  id="closebtn">CLOSE</button></span></h3>   
-       
+       <label class="labreg">REGISTER NOW</label> <span class="close"><button  id="closebtn">CLOSE</button></span>   
         </div>
       <div class="row" style="padding: 0;">
         <div class="col-md-6">
@@ -287,26 +286,37 @@ Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvin
           <input type="password" placeholder="password"> 
           <input type="number" placeholder="Contact Number"> 
           <button id="regbtn">REGISTER</button>
-          <h5 id="or">Or</h5>
-          <button id="logbtn">LOGIN</button>
+          <h5 id="or">OR</h5>
+          <button class="yo" id="logbtn" onclick="me()">LOGIN</button>
         </div>
         </div>
        </div>
       </div>
     </div>
 
+
+
+    <div id="myModal1" class="modal">
+      <div class="modal-content"> 
+        <div class="row" style="padding:30px 7px 0px 7px ;"> 
+         <label class="labreg">Welcome Back</label> <span class="close"><button  id="closebtn">CLOSE</button></span>   
+          </div>
+        <div class="row" style="padding: 0;">
+          <div class="col-md-6">
+            <div class="input">
+            <input type="email" placeholder="Email"> 
+            <input type="password" placeholder="password"> 
+            <button  id="regbtn">LOGIN</button>
+            <h5 id="or">OR</h5>
+            <button  id="soc"><img src="images/g.png"></button><button class="fb" id="soc"><img src="images/f.png"></button>
+          </div>
+          </div>
+         </div>
+        </div>
+      </div>
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <script src="js/jquery-3.2.1.min.js" type="8be725667d6156c1d0504357-text/javascript"></script>
 <script src="js/plugins.js" type="8be725667d6156c1d0504357-text/javascript"></script>
 <script src="js/main.js" type="8be725667d6156c1d0504357-text/javascript"></script>
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="8be725667d6156c1d0504357-|49" defer=""></script></body>
 </html>
-
-<!-- <div class="col-md-6" >
-  <h3 id="mreg1" style="display: block;">Welcome Back, Login</h3>
-  <div class="input">
-    <input type="email" placeholder="Email"> 
-    <input type="password" placeholder="Password"> 
-    <button id="regbtn">LOGIN</button>
-  </div>
-</div> -->

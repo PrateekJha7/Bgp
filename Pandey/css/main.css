@@ -45,12 +45,20 @@ input:focus{
     border: none;
     width: 100%;
 }
+#soc{
+    width: 49%;
+    background-color: transparent;
+    border: none;
+}
+
+
 #logbtn{
     color: #39b54a;
     background-color: transparent;
     border: none;
     width: 100%;
-    border: solid 1px #39b54a;
+    border: solid 2px #39b54a;
+    font-weight: 600;
 }
 #mreg1{
     margin: 0;
@@ -64,9 +72,11 @@ input:focus{
     background-color: #39b54a;
     color: white;
     border: none;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 /* The Modal (background) */
-.modal {
+.modal,.modal1 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -94,9 +104,13 @@ input:focus{
     color: #aaaaaa;
     float: right;
     font-size: 28px;
-  
     font-weight: bold;
   }
+.labreg{
+    color: #39b54a;
+    display: inline;
+    font-size: 40px;
+}
   
   @media only screen and (max-width: 600px) {
     #mreg1{
@@ -106,24 +120,40 @@ input:focus{
         font-size: 20px;
     }
     #closebtn{
-        margin-right: -29pxi;
         background-color: #39b54a;
         color: white;
         border: none;
         padding: 0 2rem;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .close{
         margin-top: -5%;
+    }
+    .labreg{
+        color: #39b54a;
+        display: inline;
+        font-size: 20px;
     }
     .modal-content{
         width: 90%;
     }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 330px) {
     #mreg1{
         color: #39b54a;
         display: inline;
         margin: 10;
+        font-size: 16px;
+    }
+    #soc{
+        width: 45%;
+        background-color: transparent;
+        border: none;
+    }
+    .labreg{
+        color: #39b54a;
+        display: inline;
         font-size: 16px;
     }
 }
