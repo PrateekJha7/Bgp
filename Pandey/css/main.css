@@ -2,6 +2,41 @@ html {
     font-size: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+    #mreg{
+        color: #39b54a;
+        display: inline;
+        margin: 10;
+        font-size: 16px;
+    }
+    #closebtn{
+        margin-right: -29pxi;
+        background-color: #39b54a;
+        color: white;
+        border: none;
+        padding: 0 2rem;
+    }
+    .close{
+        margin-top: -5%;
+    }
+}
+ 
+.log{
+    margin-left: 50;
+}
+.col-md-6{
+    padding: 0;
+}
+#mreg{
+    color: #39b54a;
+    display: inline;
+    margin: 10;
+}
+#closebtn{
+    background-color: #39b54a;
+    color: white;
+    border: none;
+}
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -19,11 +54,11 @@ html {
   
   /* Modal Content */
   .modal-content {
-    background-color: #fefefe;
+    background-color:black;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    border: none;
+    width: 87%;
   }
   
   /* The Close Button */
@@ -31,6 +66,7 @@ html {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
+  
     font-weight: bold;
   }
   
@@ -622,7 +658,7 @@ form,
 fieldset {
     border: none;
 }
-
+/* 
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -646,7 +682,7 @@ select {
     border-bottom: 2px solid rgba(0, 0, 0, 0.15);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-}
+} */
 
 .cl-custom-select {
     position: relative;
