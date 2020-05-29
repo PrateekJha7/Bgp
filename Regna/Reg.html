@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+ 
 <style type="text/css">
 	body{
 		color: #fff;
@@ -109,7 +110,7 @@
 </head>
 <body>
 <div class="signup-form">
-    <form action="/examples/actions/confirmation.php" method="post">
+    <form action="/examples/actions/confirmation.php" name="form" method="post">
 		<h2>Register</h2>
 		<p class="hint-text"><strong>Create your account. It's free and only takes a minute.</strong></p>
         <div class="form-group">
@@ -119,10 +120,10 @@
 			</div>        	
         </div>
         <div class="form-group">
-        	<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+        	<input type="email" pattern=".+[a-z]{2,}" class="form-control" name="email" placeholder="Email" required="required">
         </div>
 		<div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+            <input type="password" pattern=".{8,}" class="form-control" name="password" placeholder="Password(Min 8 Characters)" required="required">
         </div>
 		<div class="form-group">
             <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
@@ -130,6 +131,35 @@
         <div class="form-group">
 			<label class="checkbox-inline"><input type="checkbox" required="required"><strong> I accept the</strong> <a href="#"><strong>Terms of Use</strong></a> &amp; <a href="#"><strong>Privacy Policy</strong></a></label>
 		</div>
+		<script> 
+          
+            // Function to check Whether both passwords 
+            // is same or not. 
+            function checkPassword(form) { 
+                password1 = form.password.value; 
+                password2 = form.confirm_password.value; 
+  
+                // If password not entered 
+                if (password == '') 
+                    alert ("Please enter Password"); 
+                      
+                // If confirm password not entered 
+                else if (confirm_password == '') 
+                    alert ("Please enter confirm password"); 
+                      
+                // If Not same return False.     
+                else if (password != confirm_password) { 
+                    alert ("\nPassword did not match: Please try again...") 
+                    return false; 
+                } 
+  
+                // If same return True. 
+                else{ 
+                    alert("Password Match: Welcome to Anek!") 
+                    return true; 
+                } 
+            } 
+        </script> 
 		<div class="form-group">
             <button type="submit" class="btn btn-success btn-lg btn-block"><strong>Register Now</strong></button>
             <div class="text-center"><strong></strong><a href="index.html"><strong>Return to Home</strong></a></div>
