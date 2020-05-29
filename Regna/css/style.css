@@ -428,7 +428,7 @@ a:visited{
   padding-top: 18px;
   bottom: 0;
   z-index: 998;
-  background: rgba(52, 59, 64, 0.9);
+  background:#2dc997;
   left: -260px;
   width: 260px;
   overflow-y: auto;
