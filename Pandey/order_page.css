@@ -1,0 +1,34 @@
+.icing{
+    background-image: url(images/tools.jpg);
+}
+
+h2{
+    text-size-adjust: auto;
+    text-emphasis: none;
+    text-align: center;
+
+}
+
+.label{
+    font-family: "lora-regular", serif;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    padding-bottom: 15.6rem;
+    position: relative;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.img{
+    background-color: aliceblue;
+    size: inherit;
+    image-orientation: unset;
+}
+
+.order-button{
+    position: center;
+    text-align: center;
+}
