@@ -1,14 +1,23 @@
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0]; 
-btn.onclick = function() {
-  modal.style.display = "block";
+var modal = document.getElementsByClassName("modal");
+
+var b= document.getElementsByClassName("close");
+
+for(var i=0;i<b.length;i++){
+b[i].onclick = function(){
+for(var j=0;j<modal.length;j++){
+modal[j].style.display = "none";
+        }
+    }
 }
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+function disp(loc){
+  modal[loc].style.display = "block";
   }
-}
+
+  function nodisp(loc){
+    modal[loc].style.display = "none";
+    }
+
+    function me(){
+      nodisp(0);
+      setTimeout(function(){ disp(1); }, 700);
+      }
