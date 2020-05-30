@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+ 
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<title>Glint</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/vendor.css">
+<link rel="stylesheet" href="css/main.css">
+
+<script src="js/modernizr.js" type="8be725667d6156c1d0504357-text/javascript"></script>
+<script src="js/pace.min.js" type="8be725667d6156c1d0504357-text/javascript"></script>
+
+
+<link rel="shortcut icon" href="images/glint.ico" type="image/x-icon">
+<link rel="icon" href="images/glint.ico" type="image/x-icon">
+
+</head>
+<body id="top" style="background-color: white;">
+
+<header class="s-header" style="background-color: black;">
+<div class="header-logo">
+<a class="site-logo" href="index.html">
+<img src="images/logo.png" alt="Homepage">
+</a>
+</div>
+<nav class="header-nav">
+<a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+<div class="header-nav__content">
+<h3>Navigation</h3>
+<ul class="header-nav__list">
+<li><div class="row" style="padding: 0;">
+    <div class="col-md-6" style="padding: 10px;"><img  src="images/guest.png"></div>
+</div></li>
+<li><p class="user">Hello,</p></li>
+<li><p class="username">Satyam Pandey</p></li>
+<li onclick="location.replace('index.html')" class="current"><a   href="#" title="home">HOME</a></li>
+<li class="current"><a href="#home" title="profile">MY PROFILE</a></li>
+<li class="current"><a href="#services" title="about">SERVICES</a></li>
+<li class="current"><a href="#" title="about">ORDERS</a></li>
+<li class="current"><a href="#works" title="works">WORKS</a></li>
+<li class="current"><a href="#contact" title="contact">CONTACT</a></li>
+<li id="logout" class="current"><a href="#" title="logout">LOGOUT</a></li>
+</ul>
+<ul class="header-nav__social">
+<li>
+<a href="#"><i class="fa fa-facebook"></i></a>
+</li>
+<li>
+<a href="#"><i class="fa fa-twitter"></i></a>
+</li>
+<li>
+<a href="#"><i class="fa fa-instagram"></i></a>
+</li>
+<li>
+<a href="#"><i class="fa fa-behance"></i></a>
+</li>
+<li>
+<a href="#"><i class="fa fa-dribbble"></i></a>
+</li>
+</ul>
+</div> 
+</nav> 
+<a class="header-menu-toggle" href="#0">
+<span class="header-menu-text" style="font-weight: 900;">Menu</span>
+<span class="header-menu-icon"></span>
+</a>
+</header> 
+
+ 
+
+<section id='services' class="s-services">
+
+<div class="row section-header has-bottom-sep" data-aos="fade-up">
+<div class="col-full">
+<h3 class="subhead">services available in your area</h3>
+</div>
+<center>
+<div id="location" class="subhead" >
+  <select id="location_selection" onchange="show_service()">
+    <option disabled selected>Choose Your Current Locality</option>
+    <option>TILKAMANJHI</option>
+    <option>SABOUR</option>
+    <option>SURKIKAL</option>
+    <option>TULSI NAGAR BANK COLONY</option>
+  </select>
+  </div>
+</div> 
+</center>
+<center><div id="ser_load"><img src="images/25.gif"></div></center>
+<div class="row" id="service_layout">
+  <center>
+  <div class="col-md-3" onclick="disp(0)">
+    <img id="ser"  src="images/cut.png">
+    <label style="text-align: center;" class="sub">Home Salon</label>
+</div>
+<div class="col-md-3">
+  <img id="ser" src="images/painter.png">
+  <label style="text-align: center;" class="sub">Painter</label>
+</div>
+<div class="col-md-3">
+  <img id="ser" src="images/makeup.png">
+  <label style="text-align: center;" class="sub">Makeup</label>
+</div>
+<div class="col-md-3">
+  <img id="ser" src="images/photo.png">
+  <label style="text-align: center;" class="sub">Photoshoot</label>
+</div>
+<div class="col-md-3">
+<img id="ser" src="images/pencil.png">
+<label style="text-align: center;" class="sub">Home Tutor</label>
+</div>
+<div class="col-md-3">
+<img id="ser" src="images/repair.png">
+<label style="text-align: center;" class="sub">Mechanic</label>
+</div>
+<div class="col-md-3">
+  <img id="ser" src="images/soldering.png">
+  <label style="text-align: center;" class="sub">Technician</label>
+</div>
+<div class="col-md-3">
+<img id="ser" src="images/taxi.png">
+<label style="text-align: center;" class="sub">Cab Rental</label>
+</div>
+<div class="col-md-3">
+<img id="ser" src="images/wrench.png">
+<label style="text-align: center;" class="sub">Plumber</label>
+</div>
+</div></center>
+</section> 
+
+<div id="preloader">
+<div id="loader">
+<div class="line-scale-pulse-out">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+</div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="myModal" class="modal">
+  <div class="modal-content"> 
+    <div class="row" style="padding:30px 7px 0px 7px ;"> 
+     <label class="labreg">HOME SALON</label> <span class="close"><button  id="closebtn">CLOSE</button></span>   
+      </div>
+    <div class="row" style="padding: 0;">
+      <div class="col-md-6">
+      </div>
+     </div>
+    </div>
+  </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<script src="js/jquery-3.2.1.min.js" type="8be725667d6156c1d0504357-text/javascript"></script>
+<script src="js/plugins.js" type="8be725667d6156c1d0504357-text/javascript"></script>
+<script src="js/main.js" type="8be725667d6156c1d0504357-text/javascript"></script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="8be725667d6156c1d0504357-|49" defer=""></script></body>
+<script src="js/jai_ho.js" type="8be725667d6156c1d0504357-text/javascript"></script>
+</html>

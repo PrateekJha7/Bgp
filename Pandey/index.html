@@ -38,12 +38,14 @@
 </div></li>
 <li><p class="user">Hello,</p></li>
 <li><p class="username">Satyam Pandey</p></li>
-<li class="current"><a class="smoothscroll" href="#home" title="home">HOME</a></li>
-<li class="current"><a class="smoothscroll" href="#home" title="home">MY PROFILE</a></li>
-<li class="current"><a class="smoothscroll" href="#services" title="about">SERVICES</a></li>
-<li class="current"><a class="smoothscroll" href="#" title="about">ORDERS</a></li>
-<li class="current"><a class="smoothscroll" href="#works" title="works">WORKS</a></li>
-<li class="current"><a class="smoothscroll" href="#contact" title="contact">CONTACT</a></li>
+<li class="current"><a   href="#" title="home">HOME</a></li>
+<li class="current"><a href="#home" title="profile">MY PROFILE</a></li>
+<li class="current"><a href="#services" title="about">SERVICES</a></li>
+<li class="current"><a href="#" title="about">ORDERS</a></li>
+<li class="current"><a href="#works" title="works">WORKS</a></li>
+<li class="current"><a href="#contact" title="contact">CONTACT</a></li>
+<li id="logout" class="current"><a href="#" title="logout">LOGOUT</a></li>
+
 </ul>
 <ul class="header-nav__social">
 <li>
@@ -83,7 +85,7 @@ influential brands and <br>
 digital experiences.
 </h1>
 <div class="home-content__buttons">
-<a class="btn btn--stroke">
+<a class="btn btn--stroke" onclick="location.replace('service.html')">
 Book a Service
 </a>
 <a  class="btn btn--stroke"  onclick="disp(0)">

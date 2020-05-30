@@ -1,36 +1,4 @@
-/* =================================================================== 
- *
- *  Glint v1.0 Base Stylesheet
- *  11-20-2017
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  # imports 
- *  # normalize
- *  # basic/base setup styles
- *      ## Media
- *      ## Typography resets 
- *      ## links
- *      ## inputs
- *  # grid
- *      ## medium size devices
- *      ## tablets
- *      ## mobile devices
- *      ## small mobile devices
- *  # block grids
- *      ## medium size devices
- *      ## tablets
- *      ## mobile devices
- *      ## small mobile devices
- *  # MISC
- *
- * =================================================================== */
-
-
-/* ===================================================================
- * # imports 
- *
- * ------------------------------------------------------------------- */
+ 
 @import url("font-awesome/css/font-awesome.min.css");
 @import url("micons/micons.css");
 @import url("fonts.css");
@@ -434,7 +402,7 @@ textarea {
  *
  * ------------------------------------------------------------------- */
 .row {
-    width: 94%;
+    width: 94 %;
     max-width: 1200px;
     margin: 0 auto;
 }

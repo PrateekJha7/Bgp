@@ -21,3 +21,11 @@ function disp(loc){
       nodisp(0);
       setTimeout(function(){ disp(1); }, 700);
       }
+
+function show_service(){
+  document.getElementById("ser_load").style.display = "block";
+  setTimeout(function(){
+    document.getElementById("ser_load").style.display = "none";
+    document.getElementById("service_layout").style.display = "block";
+  },2000)
+}
