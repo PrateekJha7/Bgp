@@ -172,6 +172,40 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+
+#hero .social-icons{
+  position: relative;
+  display: flex;
+  list-style: none;
+  margin: 10px 10px;
+  display:inline-block;
+  padding: 5px 10px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 60%;
+  transition: .5s;
+}
+a{
+  color: inherit;
+}
+a:active{
+  color: inherit;
+}
+a:visited{
+  color: inherit;
+}
+#hero .social-icons:hover {
+  background: #2dc997;
+  border: 2px solid #2dc997;
+}
+
+#hero .hero_Social{
+  position: absolute; 
+  top: 90%;
+  left:0%;
+
+}
+
 #hero h1 {
   margin: 30px 0 10px 0;
   font-size: 48px;
@@ -216,7 +250,6 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid #fff;
   color: #fff;
 }
-
 #hero .btn-get-started:hover {
   background: #2dc997;
   border: 2px solid #2dc997;
