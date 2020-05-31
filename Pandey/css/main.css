@@ -146,7 +146,7 @@ input:focus{
     margin: auto;
     padding: 20px;
     border: none;
-    width: 44%;
+    width: 41%;
   }
   
   /* The Close Button */
@@ -159,7 +159,8 @@ input:focus{
 .labreg{
     color: #39b54a;
     display: inline;
-    font-size: 40px;
+    font-size: 30px;
+      font-weight: 100;
 }
   
   @media only screen and (max-width: 600px) {
@@ -236,7 +237,8 @@ input:focus{
    }
 }
 
-@media only screen and (min-width: 850px) {
+
+ @media only screen and (min-width: 900px) {
     #service_layout{
         width: 80%;
         margin-left: 120px;

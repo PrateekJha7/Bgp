@@ -15,8 +15,6 @@
 
 <script src="js/modernizr.js" type="8be725667d6156c1d0504357-text/javascript"></script>
 <script src="js/pace.min.js" type="8be725667d6156c1d0504357-text/javascript"></script>
-
-
 <link rel="shortcut icon" href="images/glint.ico" type="image/x-icon">
 <link rel="icon" href="images/glint.ico" type="image/x-icon">
 
@@ -34,9 +32,7 @@
 <div class="header-nav__content">
 <h3>Navigation</h3>
 <ul class="header-nav__list">
-<li><div class="row" style="padding: 0;">
-    <div class="col-md-6" style="padding: 10px;"><img  src="images/guest.png"></div>
-</div></li>
+
 <li><p class="user">Hello,</p></li>
 <li><p class="username">Satyam Pandey</p></li>
 <li onclick="location.replace('index.html')" class="current"><a   href="#" title="home">HOME</a></li>
@@ -79,9 +75,11 @@
 <div class="row section-header has-bottom-sep" data-aos="fade-up">
 <div class="col-full">
 <h3 class="subhead">services available in your area</h3>
+<div id='root'></div>
 </div>
 <center>
 <div id="location" class="subhead" >
+  
   <select id="location_selection" onchange="show_service()">
     <option disabled selected>Choose Your Current Locality</option>
     <option>TILKAMANJHI</option>
@@ -95,40 +93,40 @@
 <center><div id="ser_load"><img src="images/25.gif"></div></center>
 <div class="row" id="service_layout">
   <center>
-  <div class="col-md-3" onclick="disp(0)">
+  <div class="col-md-3" onclick="get_name('HOME SALON')">
     <img id="ser"  src="images/cut.png">
     <label style="text-align: center;" class="sub">Home Salon</label>
 </div>
-<div class="col-md-3">
+<div class="col-md-3" onclick="get_name('PAINTER')">
   <img id="ser" src="images/painter.png">
   <label style="text-align: center;" class="sub">Painter</label>
 </div>
-<div class="col-md-3">
+<div class="col-md-3" onclick="get_name('MAKEUP')">
   <img id="ser" src="images/makeup.png">
   <label style="text-align: center;" class="sub">Makeup</label>
 </div>
-<div class="col-md-3">
-  <img id="ser" src="images/photo.png">
-  <label style="text-align: center;" class="sub">Photoshoot</label>
+<div class="col-md-3" onclick="get_name('PHOTO-SHOOT')">
+  <img id="ser" src="images/photo.png" >
+  <label style="text-align: center;" class="sub">Photo-shoot</label>
 </div>
-<div class="col-md-3">
+<div class="col-md-3" onclick="get_name('HOME TUTOR')">
 <img id="ser" src="images/pencil.png">
 <label style="text-align: center;" class="sub">Home Tutor</label>
 </div>
 <div class="col-md-3">
-<img id="ser" src="images/repair.png">
+<img id="ser" src="images/repair.png" onclick="get_name('MECHANIC')">
 <label style="text-align: center;" class="sub">Mechanic</label>
 </div>
 <div class="col-md-3">
-  <img id="ser" src="images/soldering.png">
+  <img id="ser" src="images/soldering.png" onclick="get_name('TECHNICIAN')">
   <label style="text-align: center;" class="sub">Technician</label>
 </div>
 <div class="col-md-3">
-<img id="ser" src="images/taxi.png">
+<img id="ser" src="images/taxi.png" onclick="get_name('CAR RENTAL')">
 <label style="text-align: center;" class="sub">Cab Rental</label>
 </div>
 <div class="col-md-3">
-<img id="ser" src="images/wrench.png">
+<img id="ser" src="images/wrench.png" onclick="get_name('PLUMBER')">
 <label style="text-align: center;" class="sub">Plumber</label>
 </div>
 </div></center>
@@ -137,30 +135,49 @@
 <div id="preloader">
 <div id="loader">
 <div class="line-scale-pulse-out">
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
 </div>
+<img src="images/26.gif">
 </div>
 </div>
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="myModal" class="modal">
+  
   <div class="modal-content"> 
+   
     <div class="row" style="padding:30px 7px 0px 7px ;"> 
-     <label class="labreg">HOME SALON</label> <span class="close"><button  id="closebtn">CLOSE</button></span>   
+     <label class="labreg" id="service_name_db"></label> <span class="close"><button  id="closebtn">CLOSE</button></span>
+     <center><div id="load_ser" style="z-index: 99999;margin-top: 10%;margin-bottom: 10%;"><img src="images/26.gif"></div></center>
       </div>
     <div class="row" style="padding: 0;">
       <div class="col-md-6">
+        <div id="sub_service"></div>
+      </div>
+      <div class="col-md-6">
+        <div id="sub_service"></div>
       </div>
      </div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
 <script src="js/jquery-3.2.1.min.js" type="8be725667d6156c1d0504357-text/javascript"></script>
 <script src="js/plugins.js" type="8be725667d6156c1d0504357-text/javascript"></script>
 <script src="js/main.js" type="8be725667d6156c1d0504357-text/javascript"></script>
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="8be725667d6156c1d0504357-|49" defer=""></script></body>
-<script src="js/jai_ho.js" type="8be725667d6156c1d0504357-text/javascript"></script>
+<script src="js/db_script.js"></script><script src="js/jai_ho.js" type="8be725667d6156c1d0504357-text/javascript"></script>
 </html>
+<style>
+.modal-content {
+    background-color: black;
+    margin: auto;
+    padding: 20px;
+    border: none;
+    width: 90%;
+}
+#sub_service{
+  color: white;
+}
+</style>
