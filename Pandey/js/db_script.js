@@ -17,7 +17,7 @@ var firebaseConfig = {
 
 
   function get_name(name){
-    var content = '<div>'
+    var content = " "
     var count = 0;
     document.getElementById("service_name_db").innerHTML = name;
     document.getElementById("sub_service").innerHTML = " ";
@@ -30,13 +30,12 @@ var firebaseConfig = {
           count++;
           a =  doc.data()["SUB_SERVICE_NAME"];
           b =  doc.data()["PRICE"];
-          c =  doc.data()["MAX_QUANTITY"];
-          content += '<p>'+a+'-'+b+'-'+c+'</p>'
+          content += "<div class='row'><div class='col-md-6' id='add_comp' ><img src='images/square.png'><p id='db_service_fetch'>"+a+"</p></div><div class='col-md-6'><p id='db_service_fetch'>"+b+" /-</p></div><div class='col-md-6 float_col' id='"+a+"'><img class='add_item' src='images/plus.ico' onclick='change_order(\""+a+"\")'></div></div><br>";
         });
-        content += '</div>'
+        content += " "
         if(count == 0){
           document.getElementById("load_ser").style.display = "none";
-          document.getElementById("sub_service").innerHTML = "<center><p>No content here, Please try Again</p></center>";
+          document.getElementById("sub_service").innerHTML = "<center><p id='db_service_fetch'>No content here, Please try Again</p></center>";
         }
         else{
           document.getElementById("sub_service").innerHTML = content;

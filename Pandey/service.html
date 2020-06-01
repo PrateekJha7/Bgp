@@ -148,13 +148,7 @@
      <label class="labreg" id="service_name_db"></label> <span class="close"><button  id="closebtn">CLOSE</button></span>
      <center><div id="load_ser" style="z-index: 99999;margin-top: 10%;margin-bottom: 10%;"><img src="images/26.gif"></div></center>
       </div>
-    <div class="row" style="padding: 0;">
-      <div class="col-md-6">
-        <div id="sub_service"></div>
-      </div>
-      <div class="col-md-6">
-        <div id="sub_service"></div>
-      </div>
+    <div class="row" id="sub_service" style='margin-top:10%'>
      </div>
     </div>
   </div>
@@ -170,14 +164,19 @@
 <script src="js/db_script.js"></script><script src="js/jai_ho.js" type="8be725667d6156c1d0504357-text/javascript"></script>
 </html>
 <style>
-.modal-content {
-    background-color: black;
-    margin: auto;
-    padding: 20px;
-    border: none;
-    width: 90%;
+  @media only screen and (min-width:700px){
+    .modal-content{
+      width: 70%;
+    }
+  }
+  @media only screen and (min-width:1020px){
+    .modal-content{
+      width: 60%;
+    }
 }
-#sub_service{
-  color: white;
+@media only screen and (min-width:1300px){
+    .modal-content{
+      width: 41%;
+    }
 }
 </style>

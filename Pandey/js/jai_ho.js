@@ -30,3 +30,9 @@ function show_service(){
   },2000)
 }
 
+function change_order(a){
+  document.getElementById(a).innerHTML = "<img id='add_item' onclick='cancel_selection(\""+a+"\")' src='images/x.ico'><img id='add_item' src = 'images/check.ico'>";
+}
+function cancel_selection(a){
+  document.getElementById(a).innerHTML = "<img class='add_item' src='images/plus.ico' onclick='change_order(\""+a+"\")'></img>";
+}

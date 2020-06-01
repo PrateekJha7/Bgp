@@ -1,7 +1,28 @@
 html {
     font-size: 10px;
 }
-
+#add_item,.add_item{
+    width: 40px;
+    float: right;
+    margin-right: 40px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+#add_comp{
+    margin-left: 20px;
+    float: left;
+}
+.float_col{
+    float: right;
+}
+#db_service_fetch{
+    display: inline;
+    color: white;
+    font-family: "montserrat-medium", sans-serif;
+    border: none;
+    padding: 5px 20px;
+    margin-left: 20px;
+}
 .input{
     margin-top: 10%;   
 }
